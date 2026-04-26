@@ -2,55 +2,118 @@
 <html>
 <head>
     <title>Nithin Mahadev | Data Analyst</title>
+
     <style>
         body {
-            font-family: Arial;
             margin: 0;
-            background: #0f172a;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
             color: white;
         }
+
         .container {
-            padding: 40px;
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
+            padding: 40px;
+            animation: fadeIn 1.5s ease-in;
         }
+
         h1 {
             font-size: 42px;
+            margin-bottom: 5px;
         }
-        h2 {
-            border-bottom: 2px solid #38bdf8;
-            padding-bottom: 5px;
+
+        h3 {
+            color: #38bdf8;
+            margin-top: 0;
         }
+
         .section {
-            margin: 40px 0;
+            margin: 50px 0;
         }
+
+        h2 {
+            border-left: 5px solid #38bdf8;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
         .card {
-            background: #1e293b;
+            background: rgba(255, 255, 255, 0.05);
             padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: slideUp 1s forwards;
         }
+
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
         a {
             color: #38bdf8;
             text-decoration: none;
+            font-weight: bold;
         }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .skills span {
+            display: inline-block;
+            background: #38bdf8;
+            color: black;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 14px;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        @keyframes slideUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
     </style>
 </head>
+
 <body>
 
 <div class="container">
 
-    <h1>Hi, I'm Nithin Mahadev 👋</h1>
+    <h1>Hi, I'm Nithin 👋</h1>
     <h3>Data Analyst | Power BI | SQL | Python</h3>
 
     <div class="section">
         <h2>About Me</h2>
-        <p>I am a Data Analyst passionate about transforming data into insights and solving real-world business problems using analytics and visualization tools.</p>
+        <p>
+            I am a Data Analyst focused on solving business problems using data, 
+            building dashboards, and applying analytics techniques to generate insights.
+        </p>
     </div>
 
     <div class="section">
         <h2>Skills</h2>
-        <p>Excel | SQL | Power BI | Python | Tableau</p>
+        <div class="skills">
+            <span>Excel</span>
+            <span>SQL</span>
+            <span>Power BI</span>
+            <span>Python</span>
+            <span>Tableau</span>
+        </div>
     </div>
 
     <div class="section">
@@ -58,37 +121,39 @@
 
         <div class="card">
             <h3>CRM Sales Funnel Dashboard</h3>
-            <p>Analyzed sales pipeline, lead conversion, and revenue performance.</p>
-            <a href="https://github.com/Nithin3006/CRM-Sales-Funnel-Revenue-Analytics-Dashboard" target="_blank">View Project</a>
+            <p>Analyzed sales pipeline and revenue trends using SQL and Power BI.</p>
+            <a href="https://github.com/Nithin3006/CRM-Sales-Funnel-Revenue-Analytics-Dashboard" target="_blank">View Project →</a>
         </div>
 
         <div class="card">
             <h3>Signal Correction Model</h3>
             <p>Improved prediction accuracy using statistical modeling.</p>
-            <a href="https://github.com/Nithin3006/KPT_Signal_Correction_Zomathon" target="_blank">View Project</a>
+            <a href="https://github.com/Nithin3006/KPT_Signal_Correction_Zomathon" target="_blank">View Project →</a>
         </div>
 
         <div class="card">
             <h3>Sales Analysis Dashboard</h3>
-            <p>Built dashboards to analyze sales trends and KPIs.</p>
-            <a href="https://github.com/Nithin3006/adventure-works-sales-analysis" target="_blank">View Project</a>
+            <p>Built dashboards to track KPIs and sales trends.</p>
+            <a href="https://github.com/Nithin3006/adventure-works-sales-analysis" target="_blank">View Project →</a>
         </div>
 
         <div class="card">
             <h3>Feedback Analysis (ML)</h3>
-            <p>Used machine learning to analyze customer feedback and sentiment.</p>
-            <a href="https://github.com/Nithin3006/Government-schemes-feedback-analysis-using-ML-with-visualization" target="_blank">View Project</a>
+            <p>Performed sentiment analysis using machine learning.</p>
+            <a href="https://github.com/Nithin3006/Government-schemes-feedback-analysis-using-ML-with-visualization" target="_blank">View Project →</a>
         </div>
 
     </div>
 
     <div class="section">
         <h2>Contact</h2>
-        <p>📧 Email: nithinmahadev30@gmail.com</p>
-        <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/nithin-mahadev-396150245" target="_blank">View Profile</a></p>
+        <p>📧 your-email@gmail.com</p>
+        <p>🔗 <a href="https://www.linkedin.com/in/nithin-mahadev-396150245" target="_blank">LinkedIn Profile</a></p>
     </div>
 
 </div>
 
+</body>
+</html>
 </body>
 </html>
