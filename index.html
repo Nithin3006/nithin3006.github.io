@@ -14,24 +14,48 @@ body {
     color: white;
 }
 
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.highlight {
+    color: #38bdf8;
+    font-weight: bold;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px #38bdf8; }
+    to { text-shadow: 0 0 20px #38bdf8; }
+}
+
+/* TYPE EFFECT */
+.typing {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #38bdf8;
+    width: 0;
+    animation: typing 3s steps(40, end) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
 .container {
     max-width: 1100px;
     margin: auto;
     padding: 40px;
-}
-
-.hero {
-    text-align: center;
-    padding: 60px 0;
-}
-
-.hero h1 {
-    font-size: 50px;
-}
-
-.hero p {
-    color: #94a3b8;
-    font-size: 18px;
 }
 
 .section {
@@ -43,25 +67,7 @@ h2 {
     padding-left: 10px;
 }
 
-/* Stats */
-.stats {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.stat {
-    text-align: center;
-    margin: 10px;
-}
-
-.stat h3 {
-    color: #38bdf8;
-    font-size: 28px;
-}
-
-/* Cards */
+/* CARDS */
 .card {
     background: rgba(255,255,255,0.05);
     padding: 20px;
@@ -72,10 +78,11 @@ h2 {
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
 
+/* SKILLS */
 .skills span {
     display: inline-block;
     background: #38bdf8;
@@ -85,6 +92,19 @@ h2 {
     margin: 5px;
 }
 
+/* STATS */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.stat h3 {
+    color: #38bdf8;
+    font-size: 28px;
+}
+
+/* LINKS */
 a {
     color: #38bdf8;
     text-decoration: none;
@@ -94,38 +114,37 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Grid Projects */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
 <!-- HERO -->
-<div class="hero" data-aos="fade-up">
+<div class="hero">
 <h1>Nithin Mahadev</h1>
-<p>Turning data into actionable insights & business impact</p>
+
+<h2 class="typing">Data Analyst | Power BI | SQL | Python</h2>
+
+<p>
+<span class="highlight">Turning data into actionable insights & measurable business impact</span>
+</p>
 </div>
+
+<div class="container">
 
 <!-- ABOUT -->
 <div class="section" data-aos="fade-right">
 <h2>About Me</h2>
 
 <p>
-I am a Data Analyst skilled in SQL, Power BI, Excel, and Python, focused on solving 
-real-world business problems through data-driven decision-making.
+Results-driven Data Analyst with hands-on experience in SQL, Power BI, Excel, and Python, 
+specializing in transforming raw data into meaningful insights.
 </p>
 
 <p>
-I build dashboards, perform analysis, and apply machine learning techniques to extract 
-meaningful insights and improve business performance.
+✔ Improved reporting efficiency by <b>30%</b> through dashboard automation  
+✔ Built end-to-end data projects solving real-world business problems  
+✔ Strong focus on data storytelling and decision-making  
 </p>
 
 </div>
@@ -137,17 +156,17 @@ meaningful insights and improve business performance.
 <div class="stats">
 <div class="stat">
 <h3>5+</h3>
-<p>Projects Completed</p>
+<p>Projects</p>
+</div>
+
+<div class="stat">
+<h3>30%</h3>
+<p>Efficiency Improvement</p>
 </div>
 
 <div class="stat">
 <h3>4+</h3>
-<p>Tools Mastered</p>
-</div>
-
-<div class="stat">
-<h3>100%</h3>
-<p>Hands-on Projects</p>
+<p>Tools</p>
 </div>
 </div>
 
@@ -171,36 +190,32 @@ meaningful insights and improve business performance.
 <div class="section">
 <h2>Projects</h2>
 
-<div class="projects">
-
 <div class="card" data-aos="zoom-in">
 <h3>CRM Sales Dashboard</h3>
 <p>Analyzed sales pipeline and KPIs.</p>
-<p><b>Impact:</b> Improved sales visibility.</p>
+<p><b>Impact:</b> Improved decision-making.</p>
 <a href="https://github.com/Nithin3006/CRM-Sales-Funnel-Revenue-Analytics-Dashboard">View →</a>
 </div>
 
 <div class="card" data-aos="zoom-in">
 <h3>Signal Correction</h3>
 <p>Reduced noise in prediction data.</p>
-<p><b>Impact:</b> Increased accuracy.</p>
+<p><b>Impact:</b> Increased model accuracy.</p>
 <a href="https://github.com/Nithin3006/KPT_Signal_Correction_Zomathon">View →</a>
 </div>
 
 <div class="card" data-aos="zoom-in">
 <h3>Sales Analysis</h3>
-<p>Built dashboard for KPIs.</p>
-<p><b>Impact:</b> Identified top products.</p>
+<p>Built dashboards for KPI tracking.</p>
+<p><b>Impact:</b> Identified key trends.</p>
 <a href="https://github.com/Nithin3006/adventure-works-sales-analysis">View →</a>
 </div>
 
 <div class="card" data-aos="zoom-in">
 <h3>Feedback ML</h3>
-<p>Sentiment analysis using NLP.</p>
-<p><b>Impact:</b> Found customer trends.</p>
+<p>Performed sentiment analysis.</p>
+<p><b>Impact:</b> Extracted customer insights.</p>
 <a href="https://github.com/Nithin3006/Government-schemes-feedback-analysis-using-ML-with-visualization">View →</a>
-</div>
-
 </div>
 
 </div>
@@ -209,7 +224,7 @@ meaningful insights and improve business performance.
 <div class="section" data-aos="fade-up">
 <h2>Contact</h2>
 
-<p>📧 nithinmahadev@gmail.com</p>
+<p>📧 nithinmahadev30@gmail.com</p>
 <p>🔗 <a href="https://www.linkedin.com/in/nithin-mahadev-396150245" target="_blank">LinkedIn Profile</a></p>
 
 </div>
@@ -222,5 +237,4 @@ AOS.init();
 </script>
 
 </body>
-</html>></body>
 </html>
