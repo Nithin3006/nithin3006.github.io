@@ -4,96 +4,101 @@
 <meta charset="UTF-8">
 <title>Nithin Mahadev | Data Analyst</title>
 
-<!-- AOS Animation Library -->
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
+    background: linear-gradient(135deg, #020617, #0f172a);
     color: white;
-    scroll-behavior: smooth;
-}
-
-nav {
-    position: sticky;
-    top: 0;
-    background: rgba(15, 23, 42, 0.9);
-    padding: 15px;
-    text-align: center;
-}
-
-nav a {
-    margin: 0 15px;
-    color: #38bdf8;
-    text-decoration: none;
-    font-weight: bold;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
     padding: 40px;
 }
 
 .hero {
     text-align: center;
-    margin-top: 40px;
+    padding: 60px 0;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 50px;
 }
 
 .hero p {
     color: #94a3b8;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 25px;
-    background: #38bdf8;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: white;
+    font-size: 18px;
 }
 
 .section {
-    margin: 60px 0;
+    margin: 70px 0;
 }
 
 h2 {
-    border-left: 5px solid #38bdf8;
+    border-left: 4px solid #38bdf8;
     padding-left: 10px;
 }
 
+/* Stats */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.stat {
+    text-align: center;
+    margin: 10px;
+}
+
+.stat h3 {
+    color: #38bdf8;
+    font-size: 28px;
+}
+
+/* Cards */
 .card {
     background: rgba(255,255,255,0.05);
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 15px;
     margin: 20px 0;
+    backdrop-filter: blur(10px);
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: scale(1.03);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
 }
 
 .skills span {
     display: inline-block;
     background: #38bdf8;
     color: black;
-    padding: 6px 12px;
-    margin: 5px;
+    padding: 7px 14px;
     border-radius: 20px;
+    margin: 5px;
+}
+
+a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Grid Projects */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 </style>
@@ -101,44 +106,50 @@ h2 {
 
 <body>
 
-<!-- NAVBAR -->
-<nav>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</nav>
-
 <div class="container">
 
 <!-- HERO -->
 <div class="hero" data-aos="fade-up">
 <h1>Nithin Mahadev</h1>
-<p>Data Analyst | Power BI | SQL | Python</p>
-
-<a class="btn" href="https://github.com/Nithin3006" target="_blank">GitHub</a>
-<a class="btn" href="#">Download Resume</a>
+<p>Turning data into actionable insights & business impact</p>
 </div>
 
 <!-- ABOUT -->
-<div id="about" class="section" data-aos="fade-right">
+<div class="section" data-aos="fade-right">
 <h2>About Me</h2>
 
 <p>
-I am a results-driven Data Analyst with hands-on experience in building dashboards, 
-analyzing business performance, and applying statistical and machine learning techniques 
-to solve real-world problems.
+I am a Data Analyst skilled in SQL, Power BI, Excel, and Python, focused on solving 
+real-world business problems through data-driven decision-making.
 </p>
 
 <p>
-I specialize in transforming raw data into actionable insights that support decision-making 
-and improve business outcomes.
+I build dashboards, perform analysis, and apply machine learning techniques to extract 
+meaningful insights and improve business performance.
 </p>
 
-<p>
-✔ Built multiple end-to-end analytics projects  
-✔ Strong in SQL, Power BI, and Python  
-✔ Passionate about data storytelling and problem-solving  
-</p>
+</div>
+
+<!-- STATS -->
+<div class="section" data-aos="fade-up">
+<h2>Highlights</h2>
+
+<div class="stats">
+<div class="stat">
+<h3>5+</h3>
+<p>Projects Completed</p>
+</div>
+
+<div class="stat">
+<h3>4+</h3>
+<p>Tools Mastered</p>
+</div>
+
+<div class="stat">
+<h3>100%</h3>
+<p>Hands-on Projects</p>
+</div>
+</div>
 
 </div>
 
@@ -157,55 +168,59 @@ and improve business outcomes.
 </div>
 
 <!-- PROJECTS -->
-<div id="projects" class="section">
-
+<div class="section">
 <h2>Projects</h2>
 
+<div class="projects">
+
 <div class="card" data-aos="zoom-in">
-<h3>CRM Sales Funnel Dashboard</h3>
-<p>Analyzed lead conversion & revenue performance.</p>
-<p><b>Impact:</b> Improved visibility of sales KPIs.</p>
-<a href="https://github.com/Nithin3006/CRM-Sales-Funnel-Revenue-Analytics-Dashboard">View Project →</a>
+<h3>CRM Sales Dashboard</h3>
+<p>Analyzed sales pipeline and KPIs.</p>
+<p><b>Impact:</b> Improved sales visibility.</p>
+<a href="https://github.com/Nithin3006/CRM-Sales-Funnel-Revenue-Analytics-Dashboard">View →</a>
 </div>
 
 <div class="card" data-aos="zoom-in">
-<h3>Signal Correction Model</h3>
+<h3>Signal Correction</h3>
 <p>Reduced noise in prediction data.</p>
-<p><b>Impact:</b> Improved model accuracy.</p>
-<a href="https://github.com/Nithin3006/KPT_Signal_Correction_Zomathon">View Project →</a>
+<p><b>Impact:</b> Increased accuracy.</p>
+<a href="https://github.com/Nithin3006/KPT_Signal_Correction_Zomathon">View →</a>
 </div>
 
 <div class="card" data-aos="zoom-in">
-<h3>Sales Analysis Dashboard</h3>
-<p>Created dashboards for sales insights.</p>
-<p><b>Impact:</b> Helped identify top-performing products.</p>
-<a href="https://github.com/Nithin3006/adventure-works-sales-analysis">View Project →</a>
+<h3>Sales Analysis</h3>
+<p>Built dashboard for KPIs.</p>
+<p><b>Impact:</b> Identified top products.</p>
+<a href="https://github.com/Nithin3006/adventure-works-sales-analysis">View →</a>
 </div>
 
 <div class="card" data-aos="zoom-in">
-<h3>Feedback Analysis (ML)</h3>
-<p>Performed sentiment analysis using NLP.</p>
-<p><b>Impact:</b> Identified customer sentiment trends.</p>
-<a href="https://github.com/Nithin3006/Government-schemes-feedback-analysis-using-ML-with-visualization">View Project →</a>
+<h3>Feedback ML</h3>
+<p>Sentiment analysis using NLP.</p>
+<p><b>Impact:</b> Found customer trends.</p>
+<a href="https://github.com/Nithin3006/Government-schemes-feedback-analysis-using-ML-with-visualization">View →</a>
+</div>
+
 </div>
 
 </div>
 
 <!-- CONTACT -->
-<div id="contact" class="section" data-aos="fade-up">
+<div class="section" data-aos="fade-up">
 <h2>Contact</h2>
-<p>📧nithinmahadev30@gmail.com</p>
-<p>🔗 <a href="https://www.linkedin.com/in/nithin-mahadev-396150245" target="_blank">LinkedIn</a></p>
-</div>
+
+<p>📧 nithinmahadev@gmail.com</p>
+<p>🔗 <a href="https://www.linkedin.com/in/nithin-mahadev-396150245" target="_blank">LinkedIn Profile</a></p>
 
 </div>
 
-<!-- AOS Script -->
+</div>
+
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
 AOS.init();
 </script>
 
 </body>
-</html></body>
+</html>></body>
 </html>
